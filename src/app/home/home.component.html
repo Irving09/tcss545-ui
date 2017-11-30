@@ -1,20 +1,13 @@
-<p>
-  home works!
-</p>
-
-{{menu | json}}
-
-
 <mat-accordion>
   <mat-expansion-panel *ngFor="let item of menu; index as i"
-                       (opened)="selectedPanelOpenState = true"
-                       (closed)="selectedPanelOpenState = false">
+                       (opened)="selectedMenu = item"
+                       (closed)="selectedMenu = null">
     <mat-expansion-panel-header>
       <mat-panel-title>
         {{item.name}}
       </mat-panel-title>
       <mat-panel-description>
-        {{item.description}} Currently I am {{selectedPanelOpenState ? 'open' : 'closed'}}
+        {{item.description}}
       </mat-panel-description>
     </mat-expansion-panel-header>
 
@@ -24,7 +17,7 @@
 
     <mat-grid-list cols="2" rowHeight="50px">
       <mat-grid-tile *ngFor="let offering of item.offerings">
-        {{offering.name}} {{offering.description}}
+        {{offering.name}} - {{offering.description}} TODO go to /offerings/selectedMenu.id
       </mat-grid-tile>
     </mat-grid-list>
 
@@ -34,3 +27,6 @@
 
   </mat-expansion-panel>
 </mat-accordion>
+
+
+{{menu | json}}

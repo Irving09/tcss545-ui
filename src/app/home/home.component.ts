@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   error: Error;
 
-  selectedPanelOpenState: boolean;
+  selectedMenu: Menu;
 
   constructor(private starbucksService: StarbucksService) { }
 
