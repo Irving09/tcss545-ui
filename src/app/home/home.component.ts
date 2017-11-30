@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarbucksService } from '../starbucks.service';
+import { Menu } from '../models';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,17 @@ import { StarbucksService } from '../starbucks.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service: StarbucksService) { }
+  menu: Menu[];
+
+  constructor(private starbucksService: StarbucksService) { }
 
   ngOnInit() {
-    this.service.getMenu();
+    this.getMenu();
+  }
+
+  getMenu(): void {
+    this.starbucksService.getMenu()
+        .subscribe(menu => this.menu = menu);
   }
 
 }
