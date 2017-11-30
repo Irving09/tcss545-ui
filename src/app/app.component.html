@@ -1,14 +1,18 @@
-<h1> Welcome to {{title}}! </h1>
+<mat-toolbar color="primary" role="heading">Welcome to {{title}}!</mat-toolbar>
 
 <mat-menu #appMenu="matMenu">
-  <button mat-menu-item>
+  <a mat-menu-item routerLink="/home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </a>
+  <a mat-menu-item routerLink="/search">
     <mat-icon>search</mat-icon>
-    <span routerLink="/search">Search</span>
-  </button>
-  <button mat-menu-item>
+    <span>Search</span>
+  </a>
+  <a mat-menu-item routerLink="/about">
     <mat-icon>help</mat-icon>
-    <span routerLink="/about">About</span>
-  </button>
+    <span>About</span>
+  </a>
 </mat-menu>
 
 <button mat-icon-button [matMenuTriggerFor]="appMenu">
