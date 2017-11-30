@@ -32,5 +32,6 @@ export interface Location extends Entity {
 export interface Menu {
   id: number;
   name: string;
+  description: string;
   offerings: OfferingType[];
 }

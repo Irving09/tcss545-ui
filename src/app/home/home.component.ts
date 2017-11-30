@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
 
   error: Error;
 
+  selectedPanelOpenState: boolean;
+
   constructor(private starbucksService: StarbucksService) { }
 
   ngOnInit() {
