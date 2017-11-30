@@ -10,6 +10,8 @@ import { IngredientComponent } from './ingredient/ingredient.component';
 import { OfferingComponent } from './offering/offering.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [OfferingsService],
   bootstrap: [AppComponent]

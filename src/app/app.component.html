@@ -1,7 +1,18 @@
 <h1> Welcome to {{title}}! </h1>
-<nav>
-  <a routerLink="/search">Search</a>
-  <a routerLink="/about">About</a>
-</nav>
+
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>search</mat-icon>
+    <span routerLink="/search">Search</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>help</mat-icon>
+    <span routerLink="/about">About</span>
+  </button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>menu</mat-icon>
+</button>
 
 <router-outlet></router-outlet>
