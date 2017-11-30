@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   menu: Menu[];
 
+  error: Error;
+
   constructor(private starbucksService: StarbucksService) { }
 
   ngOnInit() {
@@ -19,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   getMenu(): void {
     this.starbucksService.getMenu()
-        .subscribe(menu => this.menu = menu);
+        .subscribe(menu => this.menu = menu, errorMessage => this.error = new Error(errorMessage));
   }
 
 }
