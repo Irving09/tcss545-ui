@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Menu } from './models';
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class StarbucksService {
 
-  constructor(private http: HttpClient) { }
+  baseUrl: string;
+
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'http://localhost:3000';
+  }
 
   getMenu(): Observable<Menu[]> {
-    return this.http.get<Menu[]>('http://localhost:3000/menu');
+    return this.http.get<Menu[]>(`${this.baseUrl}/menu`);
   }
 
 }
