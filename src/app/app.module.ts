@@ -8,11 +8,12 @@ import { SearchComponent } from './search/search.component';
 import { LocationComponent } from './location/location.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
 import { OfferingComponent } from './offering/offering.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     LocationComponent,
     IngredientComponent,
     OfferingComponent,
-    AboutComponent
+    AboutComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
