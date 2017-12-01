@@ -1,9 +1,17 @@
-<mat-toolbar color="primary" role="heading">Welcome to {{title}}!</mat-toolbar>
+<mat-toolbar color="primary" role="heading">
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
 
 <mat-menu #appMenu="matMenu">
   <a mat-menu-item routerLink="/home">
     <mat-icon>home</mat-icon>
     <span>Home</span>
+  </a>
+  <a mat-menu-item routerLink="/menu">
+    <mat-icon>menu</mat-icon>
+    <span>Menu</span>
   </a>
   <a mat-menu-item routerLink="/search">
     <mat-icon>search</mat-icon>
@@ -14,9 +22,5 @@
     <span>About</span>
   </a>
 </mat-menu>
-
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <mat-icon>menu</mat-icon>
-</button>
 
 <router-outlet></router-outlet>
