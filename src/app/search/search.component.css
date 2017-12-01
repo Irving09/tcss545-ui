@@ -1,6 +1,10 @@
 body{
   padding:1em;
+<<<<<<< HEAD
   background: url(../../assets/images/coffeebg.jpg);
+=======
+  /*background: url(../../assets/images/coffeebg.jpg);*/
+>>>>>>> 6acf8b95291056bc552d7fb39bd64ba5791be868
   background-size: cover;
   overflow: hidden;
 }
