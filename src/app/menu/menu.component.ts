@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { StarbucksService } from '../starbucks.service';
 import { Menu } from '../models';
 
@@ -15,7 +16,9 @@ export class MenuComponent implements OnInit {
 
   selectedMenu: Menu;
 
-  constructor(private starbucksService: StarbucksService) { }
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private starbucksService: StarbucksService) { }
 
   ngOnInit() {
     this.getMenu();
