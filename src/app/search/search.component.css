@@ -1,0 +1,99 @@
+body{
+  padding:1em;
+  /*background: url(../../assets/images/coffeebg.jpg);*/
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header{
+  color: #fff;
+
+  text-align: center;
+  margin-top:1em;
+}
+
+.header h2{
+  margin-bottom:5px !important;
+  /*font-family: 'Italianno', regular ;*/
+  letter-spacing: 5px;
+  font-family: 'Fondamento', cursive;
+  font-size: 54px;
+
+}
+
+.header h4{
+  margin-top:5px !important;
+  font-size: 22px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-style: italic;
+  text-align: match-parent;
+}
+
+.inputOptions{
+  /*background: url(../../assets/images/coffeebg.jpg);*/
+  /*background-size: cover;*/
+  height: 100%;
+  padding-top:0em;
+}
+
+span{
+  /*font-family: 'Nova Slim', cursive;*/
+  font-size: 24px;
+  font-family: 'Fondamento', cursive;
+  font-weight: 300;
+  padding:0.4em;
+  letter-spacing: 4px;
+  display: block;
+}
+
+form span #all, form span #any {
+  margin-right:15px;
+  text-transform: lowercase;
+}
+
+button{
+  padding:10px;
+  border-radius: 6px;
+  background-color: white;
+  opacity: 1;
+  /*font-family: 'Nova Slim', cursive;*/
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 16px;
+
+  width:90px;
+  cursor: pointer;
+  margin-top:1em;
+  font-weight: bold;
+
+}
+
+form{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  width:max-content;
+  height:max-content;
+  padding: 2em;
+  background-color: #080807;
+  opacity: 0.9;
+  color: #fff;
+  border-radius: 10%;
+}
+
+.data{
+  width:100%;
+}
+
+.data input{
+  margin-bottom: 1em;
+  width: 25em;
+  height:30px;
+}
+
+
+.data span label{
+  width: 10em;
+  display: inline-flex;
+}
+
