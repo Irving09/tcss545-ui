@@ -1,4 +1,8 @@
-<mat-toolbar color="primary" role="heading">Welcome to {{title}}!</mat-toolbar>
+<mat-toolbar color="primary" role="heading">
+  <a mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>menu</mat-icon>
+  </a>
+</mat-toolbar>
 
 <mat-menu #appMenu="matMenu">
   <a mat-menu-item routerLink="/home">
@@ -18,9 +22,5 @@
     <span>About</span>
   </a>
 </mat-menu>
-
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <mat-icon>menu</mat-icon>
-</button>
 
 <router-outlet></router-outlet>
