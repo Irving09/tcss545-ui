@@ -1,27 +1,66 @@
 <!--<p>search works!</p>-->
+<html>
+<body>
+<title>Search in menu</title>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fondamento" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+  <link href="search.component.css" rel="stylesheet">
+
+</head>
+
+<!--<div class="header" [ngStyle]="{ 'background-image': 'url(' + coffeebg.png + ')'}"><h2>StarBox</h2></div>-->
+<div class="header"><h2>StarBox</h2>
+<h4>where coffee serves you right!</h4></div>
+
+
+<!--<div class="nav">
+  <ul>
+    <li>About Us</li>
+    <li></li>
+  </ul>
+</div>-->
 
 <div class="inputOptions">
 
-<form action="">
-  <div>
-      <input type="radio" name="matchOption" value="matchAll">Match all of the following options.<br>
-      <input type="radio" name="matchOption" value="matchAny">Match any of the following options.<br><br>
+<center><form action="POST">
 
-    <label>Tags:</label>
-    <input type="text" name="tags"><br>
+    <span><input type="radio" name="matchOption" value="matchAll" id="all">Match <b>ALL</b> of the following options.</span><br>
+  <span><input type="radio" name="matchOption" value="matchAny" id="any">Match <b>ANY</b> of the following options.</span><br><br>
 
-    <label>Ingredients:</label>
-    <input type="text" name="ingredients"><br>
+  <div class ="data">
+    <span>
+      <label>Tags:</label>
+      <input type="text" name="tags">
+    </span>
 
-    <label>Name:</label>
-    <input type="text" name="name"><br>
+    <span>
+      <label>Ingredients:</label>
+      <input type="text" name="ingredients">
+    </span>
 
-    <label>Type:</label>
-    <input type="text" name="type"><br>
+    <span>
+      <label>Name:</label>
+      <input type="text" name="name">
+    </span>
 
-    <input type="search" id="mySearch" name="q">
+    <span>
+      <label>Type:</label>
+      <input type="text" name="type">
+    </span>
+
     <button>Search</button>
   </div>
-</form>
+    <!--<input type="search" id="mySearch" name="q">-->
+
+
+</form></center>
 
 </div>
+
+</body>
+</html>
+
