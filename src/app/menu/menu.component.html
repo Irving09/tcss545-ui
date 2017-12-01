@@ -9,11 +9,25 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <mat-grid-list cols="2" rowHeight="50px">
-      <mat-grid-tile *ngFor="let offering of item.offerings" [routerLink]="['/offering', offering.id]">
-        {{offering.name}} - {{offering.description}}
-      </mat-grid-tile>
-    </mat-grid-list>
+    <!--<mat-grid-list cols="2" rowHeight="50px">-->
+      <!--<mat-grid-tile *ngFor="let offering of item.offerings"-->
+                     <!--[routerLink]="['/offering', offering.id]"-->
+                     <!--[style.background]="'lightblue'">-->
+        <!--<a matTooltip="more info">{{offering.name}} - {{offering.description}}</a>-->
+      <!--</mat-grid-tile>-->
+    <!--</mat-grid-list>-->
+
+
+    <mat-list>
+      <mat-list-item *ngFor="let offering of item.offerings"
+                     [routerLink]="['/offering', offering.id]"
+                     [style.background]="'lightblue'">
+        <h4 matSubheader>{{offering.name}}</h4>
+        <mat-icon matListIcon>local_cafe</mat-icon>
+        <mat-divider></mat-divider>
+        <span>{{offering.description}}</span>
+      </mat-list-item>
+    </mat-list>
 
   </mat-expansion-panel>
 </mat-accordion>
